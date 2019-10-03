@@ -21,12 +21,8 @@
 			<%= link_to "Sign up", new_user_registration_path %>  
 		<% end %>
     <%= yield %>
-        <div>
-            <div><%= link_to "Home", root_path %></div>
-            <div><%= link_to "about", about_me_path %></div>
-            <div><%= link_to "contact",contact_path %></div>
-        </div>
 
+    <%= render "shared/nav", location: 'bottom' %>
 	<%if session[:source] %>
 	<%= session[:source].inspect %>
 	<%end%>
