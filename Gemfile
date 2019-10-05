@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 
-gem 'eliassen_view_tool', git: "https://github.com/torsteoe/eliassen-view-tool.git"
+gem 'eliassen_view_tool', '~> 0.1.0'
 
 
 
