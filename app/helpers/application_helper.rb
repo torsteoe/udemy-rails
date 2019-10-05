@@ -13,4 +13,7 @@ module ApplicationHelper
            content_tag( :h4, greeting, class:"source-class") 
         end
     end
+    def copyright_generator
+        EliassenViewTool::Renderer.copyright 'Torstein Eliassen', 'All rights reserved'
+    end
 end
