@@ -11,13 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/blog_nav"%>
   <div class="container">
+    <%= render "shared/blog_nav"%>
       <div class="row">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
 
-		<%= login_helper %>
     <%= yield %>
     <aside class="col-md-4 blog-sidebar">
       <div class="p-4 mb-3 bg-light rounded">
@@ -56,12 +53,8 @@
       </div>
   </div>
     <%= source_helper("blogs") %>
-    <footer class="blog-footer">
-  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-  <p>
-    <a href="#">Back to top</a>
-  </p>
-</footer>
-
+    <div class="blog-footer">
+        <%= render "shared/application_footer" %>
+    </div>
   </body>
 </html>
