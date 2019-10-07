@@ -1,8 +1,21 @@
-
-	<p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)%></p>
-	<p><%= portfolio_item.subtitle %></p>
-	<p><%= portfolio_item.body %></p>
-	<%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
-	<%= link_to "edit portfolio item", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %>
-
-	<%= link_to "Delete portfolio item", portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %> 
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+    <%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
+    <div class="card-body">
+        <h3><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)%></h3>
+    </div>
+      <div class="card-text">
+        <p><%= portfolio_item.subtitle %></p>
+        <p><%= portfolio_item.body %></p>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col col-md-6">
+          <p><%= link_to "Edit portfolio item", edit_portfolio_path(portfolio_item.id)%></p>
+      </div>
+      <div class="col col-md-6">
+          <p><%= link_to "Delete portfolio item", portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+      </div>
+  </div>
+    <small class="text-muted">9 mins</small>
+</div>
