@@ -38,7 +38,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'eliassen_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
-
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'bootstrap4-kaminari-views'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -12,7 +12,11 @@
 
   <body>
       <div class="container">
+          <%= render "blog_header" %>
           <%= render "shared/blog_nav"%>
+          <hr>
+          <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+          <hr>
           <div class="row">
             <%= yield %>
             <%= render "shared/blog_sidebar" %>
