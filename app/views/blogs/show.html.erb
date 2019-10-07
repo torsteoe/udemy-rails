@@ -6,20 +6,15 @@
         <div class="blog-post-meta">
             <div class="row">
                 <div class="col col-md-4">
-                    <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)  %> ago</p>
+                    <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p>
                 </div>
-                <div class="col col-md-2">
-                    <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
-                </div>
-                <div class="col col-md-2">
-                    <p><%= link_to 'Show', @blog %></p>
-                </div>
-                <div class="col col-md-2">
-                    <p><%= link_to 'Edit', edit_blog_path(@blog)  if logged_in?(:site_admin) %></p>
-                </div>
-                <div class="col col-md-2">
-                    <p><%= link_to 'Destroy', @blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)  %></p>
-                </div>
+                <% if logged_in?(:site_admin) %>
+                    <div class="col col-md-2">
+                        <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
+                        <p><%= link_to 'Edit', edit_blog_path(@blog)  %></p>
+                        <p><%= link_to 'Destroy', @blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                    </div>
+                <% end %>
             </div>
 
         </div>
