@@ -16,4 +16,20 @@ module ApplicationHelper
     def copyright_generator
         EliassenViewTool::Renderer.copyright 'Torstein Eliassen', 'All rights reserved'
     end
+
+    def nav_items
+        {"Home": root_path, "About": about_me_path, "Contact": contact_path, "Blog":blogs_path, "Portfolio": portfolios_path}
+    end
+
+    def nav_helper style, tag_type
+        nav_links = ""
+        for name, path in nav_items do
+            nav_links += content_tag(tag_type, link_to(name, path), class: "#{style} #{active? path}") 
+        end
+        nav_links.html_safe
+    end
+    
+    def active? path
+        "active" if current_page? path
+    end
 end
