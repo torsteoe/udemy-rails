@@ -24,6 +24,7 @@ class PortfoliosController < ApplicationController
 	
 	def create
 		@portfolio_item = Portfolio.new(portfolio_params)
+        @portfolio_item[:position]= 1
 
 		respond_to do |format| 
 			if @portfolio_item.save
@@ -62,6 +63,8 @@ class PortfoliosController < ApplicationController
 		params.require(:portfolio).permit(:title,
                                          :subtitle,
                                          :body,
+                                         :main_image,
+                                         :thumb_image,
                                          technologies_attributes: [:name]
                                          )
 

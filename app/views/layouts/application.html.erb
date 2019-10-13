@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="turbolinks-cache-control" content="no-cache"> 
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
@@ -19,8 +19,8 @@
                 'gjesvær.mp4',
                 id: 'background',
                 autoplay: true, 
-                muted: true,
-                loop: true
+                loop: true, 
+                muted: true
             ) %>
             <%= render "shared/application_nav" %>
             <main role="main" class="inner cover">
