@@ -26,9 +26,10 @@
             <main role="main" class="inner cover">
                 <%= yield %>
             </main>
+            <%= js extend_gritter(position:  :bottom_right) %>
             <%= render "shared/application_footer" %>
             <%= source_helper("application") %>
-            <%= render 'shared/alerts' %>
+            <%= alerts %>
       </div>
   </body>
   
