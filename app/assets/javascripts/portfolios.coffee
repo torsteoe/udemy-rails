@@ -11,12 +11,8 @@ set_positions =(updated_order=[])->
   return updated_order
 
 ready = ->
-  console.log "Positions are set"
-  console.log ""
-  set_positions()
   $('.sortable').sortable()
   $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
-    updated_order = []
     updated_order = set_positions(updated_order)
     $.ajax
       type: 'PUT'
