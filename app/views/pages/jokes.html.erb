@@ -1,0 +1,17 @@
+<div class="inner cover">
+    <div class="cover-heading">
+        <h3>Jokes from Twitter</h3>
+    </div>
+    <div class="row">
+        <% for elem in @tweets %>
+            <div class="col-md-6">
+                <div class="tech-news"> 
+                    <div class="card">
+                        <p><%= twitter_parser elem %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+

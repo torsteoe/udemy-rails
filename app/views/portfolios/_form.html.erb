@@ -45,12 +45,14 @@
             <%= f.fields_for :technologies do |technology_form| %>
                 <%= render "technology_fields", f: technology_form %>
             <% end %>
-            <div> 
-                <%= link_to_add_association 'Add Technology', f, :technologies %>
+            <div > 
+                <%= link_to_add_association 'Add Technology', f, :technologies, class:"btn btn-secondary" %>
             </div>
         </div>
 	<div class="actions">
+        <div class="col col-md-12">
         <%= f.submit "Save portfolio", class: "btn btn-primary btn-block" %>
+        </div>
 	</div>
 <% end %>
 </div>

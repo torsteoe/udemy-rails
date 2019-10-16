@@ -18,7 +18,7 @@ module ApplicationHelper
     end
 
     def nav_items
-        {"Home": root_path, "About": about_me_path, "Contact": contact_path, "Blog":blogs_path, "Portfolio": portfolios_path}
+        {"Home": root_path, "About": about_me_path, "Contact": contact_path, "Blog":blogs_path, "Portfolio": portfolios_path, "Jokes": jokes_path}
     end
 
     def nav_helper style, tag_type
