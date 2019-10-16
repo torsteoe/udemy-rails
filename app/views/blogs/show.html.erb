@@ -9,10 +9,11 @@
                     <p>Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p>
                 </div>
                 <% if logged_in?(:site_admin) %>
-                    <div class="col col-md-2">
-                        <p><%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
-                        <p><%= link_to 'Edit', edit_blog_path(@blog)  %></p>
-                        <p><%= link_to 'Destroy', @blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+                    <div class="col col-md-8">
+                        <%= link_to 'Back', blogs_path, class: 'btn btn-secondary btn-sm' %>
+                        <%= link_to @blog.status, toggle_status_blog_path(@blog), class: 'btn btn-secondary btn-sm'  %>
+                        <%= link_to 'Edit', edit_blog_path(@blog), class: 'btn btn-secondary btn-sm'   %>
+                        <%= link_to 'Delete', @blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'  %>
                     </div>
                 <% end %>
             </div>
@@ -22,6 +23,14 @@
     </div>
 
 
-    <%= link_to 'Edit', edit_blog_path(@blog)  if logged_in?(:site_admin) %> 
-    <%= link_to 'Back', blogs_path %>
+    <% unless current_user.is_a?(GuestUser) %>
+        <%= form_for @comment, url: '#' do |f| %>
+            <div class="form-group">
+                <%= f.label :content %>
+                <%= f.text_area :content, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Add comment', class: 'btn btn-primary' %>
+        <% end %>
+    <% end %>
+    <%= render @blog.comments %>
 </div>
