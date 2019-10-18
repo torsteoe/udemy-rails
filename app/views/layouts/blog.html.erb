@@ -14,9 +14,10 @@
     <%= js extend_gritter(position:  :bottom_right) %>
     <%= alerts %>
       <div class="container">
-          <%= render "blog_header" %>
+          <%= render "shared/blog_header" %>
           <%= render "shared/nav"%>
           <hr>
+          <%= link_to 'Topics', topics_path %>
           <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
           <hr>
           <div class="row">
