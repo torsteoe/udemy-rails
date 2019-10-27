@@ -6,13 +6,48 @@
         <div class="row">
             <div class="col col-md-6">
                 <%= image_tag "Profile.jpg", width: 300, alt: "profile picture Torstein Eliassen" %>
+                <div class="skills">
+                    <% @skills.each do |skill| %>
+                        <div class="skill">
+                            <h5><%= skill.title %></h5>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-warning"
+                                     role="progressbar"
+                                     aria-valuenow="<%= skill.percent_utilized %>"
+                                     aria-valuemax="100"
+                                     style="width: <%= skill.percent_utilized %>%"
+                                     >
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
             </div>
             <div class="col col-md-6">
-                <ul>
-                    <li>22 years old</li>
-                    <li>Norwegian/English</li>
-                    <li>Cybernetics and Robotics student at NTNU</li>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis nibh vel ipsum placerat consequat. Sed commodo lacus lobortis, consequat velit in, fringilla lacus. Etiam congue egestas consequat. Nam fringilla tellus in nibh pulvinar viverra. Fusce egestas, ex id dignissim dictum, nunc leo dapibus erat, quis sagittis nisl massa eu nulla. Integer velit turpis, elementum sed odio sed, tempor aliquet turpis. Fusce in malesuada lectus. Curabitur ac molestie ipsum, eu semper turpis. Sed quis faucibus est. Nullam venenatis metus nulla, vel blandit dolor pellentesque vel. Fusce elementum, arcu ac maximus hendrerit, elit odio tincidunt mauris, quis aliquet arcu dui id leo. Pellentesque id turpis leo.</p>
+                <p>Etiam at sem ut ligula pellentesque vehicula. Nam feugiat tempus dolor in aliquet. Quisque ac tellus nec ante interdum hendrerit mattis a ex. Donec non eros nec eros aliquam rhoncus ac in leo. Ut aliquam felis at maximus tempus. Sed sit amet nisl vitae felis finibus finibus sit amet commodo est. </p>
+                <button
+                    class="btn btn-secondary"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#secondParagraph"
+                    aria-expanded="false"
+                    aria-controller="secondParagraph"
+                >
+                  See more
+                </button>
             </div>
+        </div>
+    </div>
+</div>
+<div class="collapse" id="secondParagraph">
+    <div class="card">
+        <div class="card-header">
+            <h3>More info</h3>
+        </div>
+        
+        <div class="card-body"> 
+            <p>Duis laoreet nunc porta quam euismod sagittis. Sed a justo turpis. Vivamus dictum facilisis urna vel varius. Integer blandit varius lacus sit amet placerat. Donec finibus euismod pellentesque. Phasellus faucibus maximus magna, sed tincidunt enim feugiat ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis turpis nulla, blandit vitae justo vitae, rutrum commodo massa. Donec magna ex, interdum at dui nec, malesuada consectetur nulla. Suspendisse accumsan nunc quis lacus facilisis tincidunt. Nullam dignissim blandit mi non placerat. Fusce maximus mauris in ipsum lobortis aliquet. In cursus ipsum eros, non feugiat erat placerat ac. Nullam et commodo nulla, a semper nulla. Duis sollicitudin cursus erat, non gravida nisi elementum id. Suspendisse potenti.</p>
         </div>
     </div>
 </div>

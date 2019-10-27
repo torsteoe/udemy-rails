@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,15 +5,20 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <%= favicon_link_tag "favicons/favicon.ico" %>
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
+    <%= js extend_gritter(position:  :bottom_right) %>
+    <%= alerts %>
       <div class="container">
-          <%= render "blog_header" %>
+          <%= render "shared/blog_header" %>
           <%= render "shared/nav"%>
           <hr>
+          <%= link_to 'Topics', topics_path %>
           <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
           <hr>
           <div class="row">
@@ -22,7 +26,6 @@
             <%= render "shared/blog_sidebar" %>
           </div>
       </div>
-      <%= source_helper("blogs") %>
       <div class="blog-footer">
         <%= render "shared/application_footer" %>
       </div>

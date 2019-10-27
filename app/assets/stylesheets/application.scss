@@ -29,6 +29,16 @@ a:hover {
 html,
 body {
     height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, .h1
+h2, .h2
+h3, .h3
+h4, .h4
+h5, .h5
+h6, .h6 {
+    font-family: 'Libre Baskerville', serif;
 }
 
 body {
@@ -123,6 +133,7 @@ body {
 .card {
     color: black;
     text-align: left;
+    margin: 30px;
 }
 .auth-links a {
     color: black;
@@ -161,4 +172,8 @@ main {
     
 .tech-news a {
     color: green;
+}
+
+.skill {
+    margin: 5px;
 }

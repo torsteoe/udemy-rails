@@ -16,9 +16,17 @@
 .blog-header-logo:hover {
   text-decoration: none;
 }
+body {
+    font-family: 'Lato', sans-serif;
+}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6, {
+    font-family: 'Libre Baskerville', serif;
 }
 
 .display-4 {
@@ -152,4 +160,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-name {
     font-weight: 700;
+}
+
+.blogcrumb a {
+    font-size: 1.25em;
+    margin: 0px 10px 0px 10px;
 }
