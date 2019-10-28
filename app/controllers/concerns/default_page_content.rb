@@ -6,7 +6,7 @@ module DefaultPageContent
         end
 
         def set_title
-            @page_title = "Default tab-title"
+            @page_title = "Torstein Eliassen"
             @seo_keywords = "Torsteins portfolio"
         end
 end
