@@ -24,17 +24,18 @@
                 </div>
             </div>
             <div class="col col-md-6">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis nibh vel ipsum placerat consequat. Sed commodo lacus lobortis, consequat velit in, fringilla lacus. Etiam congue egestas consequat. Nam fringilla tellus in nibh pulvinar viverra. Fusce egestas, ex id dignissim dictum, nunc leo dapibus erat, quis sagittis nisl massa eu nulla. Integer velit turpis, elementum sed odio sed, tempor aliquet turpis. Fusce in malesuada lectus. Curabitur ac molestie ipsum, eu semper turpis. Sed quis faucibus est. Nullam venenatis metus nulla, vel blandit dolor pellentesque vel. Fusce elementum, arcu ac maximus hendrerit, elit odio tincidunt mauris, quis aliquet arcu dui id leo. Pellentesque id turpis leo.</p>
-                <p>Etiam at sem ut ligula pellentesque vehicula. Nam feugiat tempus dolor in aliquet. Quisque ac tellus nec ante interdum hendrerit mattis a ex. Donec non eros nec eros aliquam rhoncus ac in leo. Ut aliquam felis at maximus tempus. Sed sit amet nisl vitae felis finibus finibus sit amet commodo est. </p>
+                <p>My name is Torstein Ørbeck Eliassen. I am 22 years old and currently studying Cybernetics and Robotics at NTNU, the Norwegian University of Science and Technology. I am born in Bærum and for my high school education, I moved to Rouen, France as a part of the Norwegian Section at Lycée Pierre Corneille. After returning from France, I served my Military Service in the Band and Drill company of His Majesty the King’s Guard. Here, I was a musician, playing the bugle and performing nationwide in addition to military tattoos in Malmø, Sweden and Basel, Switzerland. </p>
+
+                <p>In my spare time, I am active in the NTNUI Athletics Group where I run twice a week, in addition to other activities such as hiking and skiing. I also enjoy climbing and I have played the trumpet since I was a young child.</p>
                 <button
-                    class="btn btn-secondary"
+                    class="btn btn-secondary font-weight-bold"
                     type="button"
                     data-toggle="collapse"
                     data-target="#secondParagraph"
                     aria-expanded="false"
                     aria-controller="secondParagraph"
                 >
-                  See more
+                Job History
                 </button>
             </div>
         </div>
@@ -43,11 +44,17 @@
 <div class="collapse" id="secondParagraph">
     <div class="card">
         <div class="card-header">
-            <h3>More info</h3>
+            <h3>Job History</h3>
         </div>
         
         <div class="card-body"> 
-            <p>Duis laoreet nunc porta quam euismod sagittis. Sed a justo turpis. Vivamus dictum facilisis urna vel varius. Integer blandit varius lacus sit amet placerat. Donec finibus euismod pellentesque. Phasellus faucibus maximus magna, sed tincidunt enim feugiat ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis turpis nulla, blandit vitae justo vitae, rutrum commodo massa. Donec magna ex, interdum at dui nec, malesuada consectetur nulla. Suspendisse accumsan nunc quis lacus facilisis tincidunt. Nullam dignissim blandit mi non placerat. Fusce maximus mauris in ipsum lobortis aliquet. In cursus ipsum eros, non feugiat erat placerat ac. Nullam et commodo nulla, a semper nulla. Duis sollicitudin cursus erat, non gravida nisi elementum id. Suspendisse potenti.</p>
+            <ol>
+                <li><%= link_to "Summer 2019: Intern at Disruptive Technologies Research AS", "https://www.disruptive-technologies.com/" %></li>
+                <li><%= link_to "Summer 2018: Course leader at the Scientist Factory", "https://www.forskerfabrikken.no/" %></li>
+                <li><%= link_to "2016-2017: Military service, musician in His Majesty the King's Guard band and drill unit", "https://musikkogdrill.com/" %></li>
+                <li><%= link_to "Summer 2016: Shop assistant at Holmenkollen Ski museum and Tower", "https://www.skiforeningen.no/holmenkollen/skimuseet/" %></li>
+                <li><%= link_to "Summer 2015: Nursing assistant at Stabæktunet Nursing Home", "https://www.baerum.kommune.no/tjenester/helse-og-omsorg/sykehjem-bo-og-behandlingssenter/stabaktunet-bo--og-behandlingssenter/" %></li>
+
         </div>
     </div>
 </div>
